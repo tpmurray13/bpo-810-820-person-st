@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>802 &amp; 820 Person St — Broker Price Opinion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: .25rem; --space-2: .5rem; --space-3: .75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem;
+      --color-bg:#ffffff; --color-surface:#ffffff; --color-surface-2:#eaf2ed; --color-border:#e1ded6; --color-text:#333333; --color-text-muted:#6b6f6c;
+      --color-primary:#17613c; --color-primary-2:#d9ebe1; --color-band:#a3701f; --color-band-soft:#f2e6d3;
+      --color-alert:#a3341f; --color-alert-soft:#f2dcd3;
+      --radius-md:.5rem; --radius-lg:.9rem; --radius-xl:1.2rem;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.06); --shadow-md:0 8px 24px rgba(0,0,0,.08);
+      --font-display:'Outfit', system-ui, sans-serif; --font-body:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{font-family:var(--font-body);font-size:var(--text-base);color:var(--color-text);background:var(--color-bg);line-height:1.6}
+    a{color:var(--color-primary)} .container{max-width:1100px;margin:0 auto;padding:0 var(--space-4)}
+    .topbar{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:2px solid var(--color-primary);z-index:20}
+    .topbar-inner{display:flex;justify-content:space-between;align-items:center;padding:var(--space-3) 0;flex-wrap:wrap;gap:var(--space-2)}
+    .logo{display:flex;gap:var(--space-3);align-items:center;font-weight:600}
+    .logo img{height:42px;width:auto;display:block}
+    .hero{padding:var(--space-16) 0 var(--space-12)}
+    .eyebrow{font-size:var(--text-sm);letter-spacing:.12em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:var(--space-3)}
+    h1,h2,h3,h4{font-family:var(--font-display);line-height:1.12;font-weight:700;color:var(--color-primary)}
+    h1{font-size:var(--text-2xl);max-width:34ch;margin-bottom:var(--space-4)} h2{font-size:var(--text-xl);margin-bottom:var(--space-5)} h3{font-size:var(--text-lg);margin-bottom:var(--space-3)} h4{font-size:var(--text-base);margin-bottom:var(--space-2)}
+    .lede{max-width:72ch;color:var(--color-text-muted)}
+    .grid{display:grid;grid-template-columns:1.3fr .9fr;gap:var(--space-8);align-items:start}
+    .card{background:var(--color-surface);border:1px solid rgba(31,35,32,.12);border-radius:var(--radius-xl);padding:var(--space-6);box-shadow:var(--shadow-sm)}
+    .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4);margin-top:var(--space-8)}
+    .stat{background:var(--color-surface-2);border-radius:var(--radius-lg);padding:var(--space-4)} .stat-label{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-muted)} .stat-value{font-size:var(--text-lg);font-weight:700;margin-top:.2rem;color:var(--color-primary)}
+    .stat-alert .stat-value{color:var(--color-alert)}
+    section{padding:var(--space-10) 0}
+    section.alt{background:var(--color-surface-2)}
+    .table{width:100%;border-collapse:collapse;font-size:var(--text-sm)} .table th,.table td{padding:.85rem .6rem;border-bottom:1px solid rgba(31,35,32,.1);text-align:left;vertical-align:top} .table th{color:var(--color-text-muted);font-weight:600;white-space:nowrap}
+    .table-wrap{overflow-x:auto}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8)}
+    .prop-card + .prop-card{margin-top:var(--space-6)}
+    .spec-list{display:flex;flex-direction:column;gap:var(--space-4);margin-top:var(--space-4)}
+    .spec-row{padding-bottom:var(--space-3);border-bottom:1px solid rgba(31,35,32,.1)}
+    .spec-row:last-child{border-bottom:none;padding-bottom:0}
+    .spec-label{font-size:var(--text-xs);color:var(--color-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:.25rem}
+    .spec-value{font-size:var(--text-sm);line-height:1.55}
+    .three-col{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4)}
+    .pill{display:inline-block;background:var(--color-primary-2);color:var(--color-primary);padding:.35rem .7rem;border-radius:999px;font-size:var(--text-xs);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .pill-band{display:inline-block;background:var(--color-band-soft);color:var(--color-band);padding:.35rem .7rem;border-radius:999px;font-size:var(--text-xs);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .pill-alert{display:inline-block;background:var(--color-alert-soft);color:var(--color-alert);padding:.35rem .7rem;border-radius:999px;font-size:var(--text-xs);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .pill-outline{display:inline-block;border:1px solid rgba(31,35,32,.18);color:var(--color-text-muted);padding:.3rem .65rem;border-radius:999px;font-size:var(--text-xs);font-weight:600;margin:.15rem .25rem .15rem 0}
+    .hero-photo{width:100%;border-radius:var(--radius-xl);box-shadow:var(--shadow-md);display:block;margin-bottom:var(--space-6);object-fit:cover;max-height:520px}
+    .photo-sm{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);display:block;margin-bottom:var(--space-4);object-fit:cover;max-height:260px}
+    .note{font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-4)}
+    footer{padding:var(--space-10) 0;background:var(--color-primary);color:#ffffff;font-size:var(--text-sm)}
+    .footer-inner{display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap}
+    .footer-logo{height:36px;width:auto;filter:brightness(0) invert(1)}
+    .disclaimer{background:var(--color-surface-2);border-radius:var(--radius-lg);padding:var(--space-5);font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-6)}
+    .prop-divider{display:flex;align-items:center;gap:var(--space-4);margin:var(--space-4) 0 var(--space-6)}
+    .prop-divider .badge{background:var(--color-primary);color:#fff;font-family:var(--font-display);font-weight:700;font-size:var(--text-xs);letter-spacing:.06em;text-transform:uppercase;padding:.4rem .85rem;border-radius:999px;white-space:nowrap}
+    .prop-divider .badge.two{background:var(--color-band)}
+    .prop-divider hr{flex:1;border:none;border-top:1px solid rgba(31,35,32,.15)}
+    .terms-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6)}
+    @media (max-width: 820px){.grid,.two-col,.terms-grid,.three-col{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+    .btn-print{display:inline-flex;align-items:center;gap:.5rem;background:var(--color-primary);color:#ffffff;border:none;padding:.55rem 1.1rem;border-radius:999px;font-family:var(--font-body);font-weight:600;font-size:var(--text-xs);letter-spacing:.02em;cursor:pointer;box-shadow:var(--shadow-sm);transition:background .15s ease}
+    .btn-print:hover{background:#0f4a2d}
+    .btn-print svg{width:15px;height:15px;fill:currentColor;flex:none}
+    .topbar-actions{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+    @media print {
+      .no-print{display:none !important}
+      *{-webkit-print-color-adjust:exact;print-color-adjust:exact;color-adjust:exact}
+      html,body{font-size:10.5pt;line-height:1.45}
+      .topbar{position:static;backdrop-filter:none;box-shadow:none;border-bottom:2px solid var(--color-primary)}
+      .hero{padding:14pt 0 10pt}
+      section{padding:12pt 0}
+      .grid,.two-col,.terms-grid,.three-col{grid-template-columns:1fr;gap:10pt}
+      .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8pt}
+      .hero-photo{max-height:260pt;box-shadow:none}
+      .photo-sm{max-height:150pt;box-shadow:none}
+      .prop-card + .prop-card{margin-top:10pt}
+      .spec-list{gap:6pt;margin-top:6pt}
+      .spec-row{padding-bottom:5pt}
+      .spec-label{font-size:7.5pt}
+      .spec-value{font-size:9pt;line-height:1.4}
+      h1{font-size:19pt;margin-bottom:8pt}
+      h2{font-size:14.5pt;margin-bottom:8pt}
+      h3{font-size:12pt;margin-bottom:6pt}
+      h4{font-size:10.5pt;margin-bottom:4pt}
+      .card{box-shadow:none;border:1px solid #d7d3c8;padding:10pt}
+      .stat{page-break-inside:avoid}
+      table{font-size:9pt}
+      tr{page-break-inside:avoid}
+      .comps-table{table-layout:fixed;width:100%}
+      .comps-table th,.comps-table td{white-space:normal;word-wrap:break-word;overflow-wrap:break-word;font-size:6.6pt;line-height:1.35;padding:.3rem .2rem}
+      .adj-table{table-layout:fixed;width:100%}
+      .adj-table th,.adj-table td{white-space:normal;word-wrap:break-word;overflow-wrap:break-word;font-size:7.1pt;line-height:1.35;padding:.3rem .2rem}
+      .adj-table th:nth-child(1),.adj-table td:nth-child(1){width:16%}
+      .adj-table th:nth-child(2),.adj-table td:nth-child(2){width:10%}
+      .adj-table th:nth-child(3),.adj-table td:nth-child(3){width:8%}
+      .adj-table th:nth-child(4),.adj-table td:nth-child(4){width:56%}
+      .adj-table th:nth-child(5),.adj-table td:nth-child(5){width:10%}
+      .parcel-table{table-layout:fixed;width:100%}
+      .parcel-table th,.parcel-table td{white-space:normal;word-wrap:break-word;overflow-wrap:break-word;font-size:7.3pt;line-height:1.35;padding:.3rem .2rem}
+      .table-wrap{overflow-x:visible}
+      h2,h3,h4{page-break-after:avoid}
+      .prop-divider{page-break-after:avoid}
+      footer{background:var(--color-primary) !important;color:#ffffff !important;padding:10pt 0}
+      a{color:var(--color-primary) !important;text-decoration:none}
+      @page{margin:0.55in}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="logo">
+        <img src="assets/gm-logo.svg" alt="Grant-Murray Real Estate" />
+      </div>
+      <div class="topbar-actions">
+        <div class="pill">Sale BPO &middot; Owner-Occupied, Business to Relocate</div>
+        <button class="btn-print no-print" type="button" onclick="window.print()">
+          <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7h2a2 2 0 0 1 2 2v7h-4v4H6v-4H2v-7a2 2 0 0 1 2-2h2zm2-5v5h8V4H8zm8 14H8v3h8v-3zm2-2h2v-5H4v5h2v-2h12v2z"/></svg>
+          Print / Save as PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Broker Price Opinion &middot; New Listing Valuation (Sale) &middot; Cumberland County, NC</div>
+        <h1>802 &amp; 820 Person St &mdash; Broker Price Opinion</h1>
+        <p class="lede">The subject is an assemblage of <strong>three contiguous parcels totaling 0.69 acres</strong> at 802 &amp; 820 Person St plus one unaddressed parcel on the same original tract, in the King Street Area submarket just west of downtown Fayetteville. A single <strong>5,984 SF, one-story commercial building</strong> (built 1970, remodeled 2011) sits on the 820 Person St parcel and is <strong>actively occupied by Arnold Service Company (d/b/a McGowan Heating &amp; Air, Inc.)</strong>, a licensed HVAC contractor operated by the property's principal, Scott A. McGowan. All three parcels are owned by <strong>McGowan Investments, LLC</strong>. This opinion addresses <strong>fee-simple sale value</strong> on the assumption that the ongoing business relocates prior to or at closing. Because no arm's-length sale of the improved parcel is on record, the <strong>sales comparison approach is primary</strong>, built entirely on independently verified Cumberland County closed sales rather than any client-supplied marketing material.</p>
+        <div class="stats">
+          <div class="stat stat-alert"><div class="stat-label">Recommended list price</div><div class="stat-value">$400,000</div></div>
+          <div class="stat"><div class="stat-label">Sales comparison indicated value</div><div class="stat-value">$375,400</div></div>
+          <div class="stat"><div class="stat-label">Combined 2026 assessed value (reference)</div><div class="stat-value">$185,537</div></div>
+          <div class="stat"><div class="stat-label">Combined site / building</div><div class="stat-value">0.69 ac &middot; 5,984 SF</div></div>
+        </div>
+        <p class="note">Full comp research, the adjustment grid, and the land value add-on for the two unimproved parcels are set out below. This is a broker's opinion of value prepared for marketing purposes, not a certified USPAP appraisal.</p>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <h2>Subject property summary</h2>
+        <div class="card prop-card">
+          <div class="pill">Subject &mdash; three-parcel assemblage, owner-occupied</div>
+          <h3 style="margin-top:.6rem">802 &amp; 820 Person St, Fayetteville, NC 28301</h3>
+          <div class="spec-list">
+            <div class="spec-row"><div class="spec-label">Owner of record</div><div class="spec-value">McGowan Investments, LLC, 317 Stacy Weaver Dr, Fayetteville, NC 28311 &mdash; confirmed on all three parcels per <a href="https://taxpwa.co.cumberland.nc.us/camapwa/PropertySummary.aspx?PARCELPK=95699" target="_blank" rel="noopener">802 Person St</a>, <a href="https://taxpwa.co.cumberland.nc.us/camapwa/PropertySummary.aspx?PARCELPK=95942" target="_blank" rel="noopener">820 Person St</a>, and <a href="https://taxpwa.co.cumberland.nc.us/camapwa/PropertySummary.aspx?PARCELPK=95704" target="_blank" rel="noopener">0 Person St</a> Cumberland County CAMA Property Summaries. Note: the client's request referenced &ldquo;810 Person St,&rdquo; but no such address exists in county records; the McGowan-owned parcels on this tract are addressed 802 and 820 Person St, plus one unaddressed parcel &mdash; this report values all three together as instructed.</div></div>
+            <table class="table parcel-table" style="margin-top:.75rem">
+              <tr><th>Parcel</th><th>REID / PIN</th><th>Acreage</th><th>Zoning</th><th>Improvements</th><th>2026 assessed</th></tr>
+              <tr><td><strong>802 Person St</strong></td><td>0447028277000 / 0447-02-8277</td><td>0.07 ac</td><td>LI &mdash; Light Industrial</td><td>None (land only)</td><td>$885</td></tr>
+              <tr><td><strong>820 Person St</strong></td><td>0447120281000 / 0447-12-0281</td><td>0.22 ac</td><td>CC &mdash; Community Commercial</td><td>5,984 SF building</td><td>$175,817</td></tr>
+              <tr><td><strong>0 Person St</strong> (unaddressed)</td><td>0447029274000 / 0447-02-9274</td><td>0.40 ac</td><td>LI &mdash; Light Industrial</td><td>Misc. improvements only</td><td>$8,835</td></tr>
+              <tr><td><strong>Combined</strong></td><td>&mdash;</td><td><strong>0.69 ac</strong></td><td>Mixed CC / LI</td><td><strong>5,984 SF</strong></td><td><strong>$185,537</strong></td></tr>
+            </table>
+            <div class="spec-row" style="margin-top:.5rem"><div class="spec-label">Building</div><div class="spec-value">One-story commercial building on the 820 Person St parcel: Class C concrete/masonry-block walls, Primary Quality D+, built <strong>1970</strong> (effective year 1979), <strong>remodeled 2011</strong>, physical depreciation 63% ("Fair" rating), air-conditioned, not sprinklered, office + utility/unfinished interior finish, 168 SF attached canopy. Source: <a href="https://taxpwa.co.cumberland.nc.us/camapwa/BuildingDetails.aspx?PARCELPK=95942&amp;BldgCardNum=1&amp;SectionNum=1" target="_blank" rel="noopener">CAMA Building Summary, PARCELPK 95942</a>.</div></div>
+            <div class="spec-row"><div class="spec-label">Current occupancy</div><div class="spec-value">Owner-occupied by <strong>Arnold Service Company</strong> (d/b/a McGowan Heating &amp; Air, Inc.), a full-service HVAC/heating &amp; air conditioning contractor at 820 Person St since at least 2013, licensed NC H-1/H-2/H-3 under principal <strong>Scott Anthony McGowan</strong> (License L.22474). The business is an active, ongoing operation &mdash; not vacant &mdash; and would need to relocate in connection with any third-party sale. Source: <a href="https://www.bbb.org/us/nc/fayetteville/profile/air-conditioning-repair/arnold-service-company-0593-90016384" target="_blank" rel="noopener">BBB profile</a>, <a href="https://safehirenc.com/contractor/arnold-service-co-dba-247" target="_blank" rel="noopener">NC contractor license verification</a>.</div></div>
+            <div class="spec-row"><div class="spec-label">Zoning</div><div class="spec-value">Mixed across the assemblage: the improved 820 Person St parcel is zoned <strong>CC &mdash; Community Commercial</strong>; the two ancillary parcels (802 Person St and the unaddressed 0.40-ac parcel) are zoned <strong>LI &mdash; Light Industrial</strong>. Source: <a href="https://gis.co.cumberland.nc.us/server/rest/services/Tax/Parcels/MapServer/0/query?where=REID%3D%270447120281000%27&amp;outFields=*&amp;f=pjson" target="_blank" rel="noopener">Cumberland County GIS Tax Parcels query</a>.</div></div>
+            <div class="spec-row"><div class="spec-label">Deed / transfer history</div><div class="spec-value">820 Person St: most recent deed 10/03/2023 (Bk 11833/Pg 300, $0 revenue stamps &mdash; a non-arm's-length internal transfer); the last money-transfer sale on record for this parcel was 09/25/2013 at <strong>$110,000</strong>. 802 Person St and the unaddressed 0.40-ac parcel: both transferred together 09/25/2024 (Bk 12068/Pg 557, $0 stamps), consolidating them under McGowan Investments, LLC. No arm's-length third-party sale of the assembled tract is on record, so county sale history is disclosed for reference only and is not used as a value indicator. Source: CAMA Property Summaries linked above.</div></div>
+            <div class="spec-row"><div class="spec-label">Location</div><div class="spec-value">Assessor neighborhood/market area <strong>"King Street Area"</strong> (VCS 8106) &mdash; the same submarket as Grant-Murray's prior BPOs at 135 S King St and 110 S Racepath St, roughly a third of a mile away. The corridor is a mix of light-industrial, contractor, and community-commercial uses just west of downtown Fayetteville.</div></div>
+          </div>
+        </div>
+        <p class="note">Ownership, building, zoning, and deed data verified against Cumberland County GIS/CAMA records, pulled 9/10/2026.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Methodology and verification basis</h2>
+        <div class="card">
+          <p style="margin-top:0">No arm's-length sale of the assembled subject property is on record, and the client did not supply any marketing brochure or third-party comp package for this assignment. This BPO relies entirely on the <strong>sales comparison approach</strong>, built on comparable sales independently researched directly from county records.</p>
+          <ul style="margin:0 0 0 1.2rem;padding:0">
+            <li style="margin-bottom:.5rem"><strong>Source of record for comps:</strong> the <a href="https://taxpwa.co.cumberland.nc.us/camapwa/" target="_blank" rel="noopener">Cumberland County CAMA/tax property system</a> and <a href="https://gis.co.cumberland.nc.us/server/rest/services/Tax/Parcels/MapServer/0" target="_blank" rel="noopener">GIS Tax Parcels layer</a>, queried directly for closed sales in the subject's own "King Street Area" assessor neighborhood.</li>
+            <li style="margin-bottom:.5rem">Every comp below was pulled from a structured parcel-sales query and cross-checked against its own CAMA building detail record for year built, quality, and depreciation &mdash; none were taken from a listing site or brochure.</li>
+            <li style="margin-bottom:.5rem"><strong>Per client instruction, this report also cites Grant-Murray's two most recent prior BPOs in this same corridor</strong> &mdash; <a href="https://tpmurray13.github.io/bpo-135-s-king/" target="_blank" rel="noopener">135 S King St</a> ($800,000 recommended list price, a 57,964 SF industrial site with an as-is tire-stockpile encumbrance) and <a href="https://tpmurray13.github.io/bpo-110-racepath-v2/" target="_blank" rel="noopener">110 S Racepath St</a> ($455,000 recommended list price, a largely land-driven HI-zoned parcel) &mdash; for corridor context and as a cross-check on land value. Neither is used as a direct improved-building comp, since both differ materially in scale and condition from the subject; see Nearby prior opinions below.</li>
+            <li>Adjustments applied to each comp reflect Grant-Murray Real Estate's professional judgment as the prospective listing broker, including the ownership's specific direction to account for the subject's building size, its continuously maintained/operating condition, and the presence of an active business that will need to relocate. Where county assessment data runs counter to that direction, it is disclosed rather than omitted &mdash; see the adjustment matrix notes below.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <h2>Nearby prior opinions (cited per client instruction)</h2>
+        <div class="card">
+          <p style="margin-top:0"><strong><a href="https://tpmurray13.github.io/bpo-135-s-king/" target="_blank" rel="noopener">135 S King St</a></strong> &mdash; a 2.5-acre HI-zoned site with a 57,964 SF industrial building (1905&ndash;1965 construction) and an abandoned tire stockpile; Grant-Murray's recommended list price was <strong>$800,000</strong> ($13.80/SF, adjusted for the specialized as-is remediation liability), with a blended reliance on improved comps such as 458 Whitfield St and industrial land sales around $255,000/acre. The site's scale and severe deferred-maintenance/environmental profile make it a poor direct building comp for the much smaller, actively operating subject, but it confirms the corridor supports institutional-scale industrial demand.</p>
+          <p><strong><a href="https://tpmurray13.github.io/bpo-110-racepath-v2/" target="_blank" rel="noopener">110 S Racepath St</a></strong> &mdash; a 1.78-acre HI-zoned parcel with only an incidental ~1,800 SF structure, valued primarily as land; Grant-Murray's recommended list price was <strong>$455,000</strong> (&asymp;$255,618/acre), within a broader range of $100,000&ndash;$250,000/acre observed for HI-zoned land with modest or no improvements in this submarket, bracketed by comps including 408 S Racepath St ($300,000/acre) and 327 E Jenkins St ($104,500/acre). This land-value range directly informs the land add-on applied to the subject's two ancillary, largely unimproved parcels below.</p>
+          <p class="note" style="margin-top:1rem">Both reports are Grant-Murray broker opinions, not certified appraisals, and neither is treated as a substitute for the independently researched improved-building comps used to value the subject's 5,984 SF structure.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Comparable sales</h2>
+        <p class="lede" style="margin-bottom:var(--space-6)">Six independently verified closed sales of small commercial/light-industrial buildings in the subject's own "King Street Area" assessor neighborhood (2022&ndash;2026), each confirmed against the county's CAMA building and sales records. No brochure or third-party comps were used. <strong>138 N Racepath St, 312 N Racepath St, and 408 S Racepath St</strong> (marked below) are treated as primary comps &mdash; the three closest in size (3,200&ndash;6,520 SF) and recency (2023&ndash;2024) to the subject's 5,984 SF building. 912 Grove St and 107 S Broad St bracket the range with much larger buildings at lower $/SF; 801 Person St brackets it with a much smaller building at a higher $/SF, on the same street as the subject.</p>
+        <div class="card table-wrap">
+          <table class="table comps-table">
+            <tr><th>Comp</th><th>Sale date</th><th>Price</th><th>Bldg SF</th><th>$/SF</th><th>Notes</th><th>Source</th></tr>
+            <tr><td><strong>138 N Racepath St</strong> <span class="pill-outline" style="font-size:9px;padding:.15rem .4rem;margin:0">Primary</span></td><td>07/26/2023</td><td>$335,000</td><td>6,520</td><td>$51.38</td><td>CC zoning, steel-frame storage/garage w/ mezzanine office, Quality C, built 1990/eff. 1997, remodeled 2015, 40% depreciation ("Average")</td><td><a href="https://taxpwa.co.cumberland.nc.us/camapwa/BuildingDetails.aspx?PARCELPK=95970&BldgCardNum=1&SectionNum=1" target="_blank" rel="noopener">CAMA</a></td></tr>
+            <tr><td><strong>312 N Racepath St</strong> <span class="pill-outline" style="font-size:9px;padding:.15rem .4rem;margin:0">Primary</span></td><td>02/02/2023</td><td>$200,000</td><td>3,200</td><td>$62.50</td><td>HI zoning, concrete/masonry office &amp; multi-purpose, Quality C, built 1965/eff. 1975, remodeled 2023, 62% depreciation ("Average")</td><td><a href="https://taxpwa.co.cumberland.nc.us/camapwa/BuildingDetails.aspx?PARCELPK=96015&BldgCardNum=1&SectionNum=1" target="_blank" rel="noopener">CAMA</a></td></tr>
+            <tr><td><strong>408 S Racepath St</strong> <span class="pill-outline" style="font-size:9px;padding:.15rem .4rem;margin:0">Primary</span></td><td>06/26/2024</td><td>$225,000</td><td>4,800</td><td>$46.88</td><td>HI zoning, steel-frame storage/garage w/ office, Quality C, built 1983, 56% depreciation ("Average"); the strongest comp cited in Grant-Murray's own 110 S Racepath St BPO</td><td><a href="https://taxpwa.co.cumberland.nc.us/camapwa/BuildingDetails.aspx?PARCELPK=95614&BldgCardNum=1&SectionNum=1" target="_blank" rel="noopener">CAMA</a></td></tr>
+            <tr><td><strong>912 Grove St</strong></td><td>08/11/2022</td><td>$425,000</td><td>21,600</td><td>$19.68</td><td>HI zoning, steel-frame warehouse/distribution ("Costin Distr. Co."), Quality C, built 1969, 72% depreciation ("Fair") &mdash; large-building, low-$/SF bracket</td><td><a href="https://taxpwa.co.cumberland.nc.us/camapwa/BuildingDetails.aspx?PARCELPK=96022&BldgCardNum=1&SectionNum=1" target="_blank" rel="noopener">CAMA</a></td></tr>
+            <tr><td><strong>107 S Broad St</strong></td><td>07/28/2026</td><td>$250,000</td><td>16,880</td><td>$14.81</td><td>HI zoning, steel-frame warehouse/distribution, Quality C, built 1974, 65% depreciation ("Average"), no air conditioning &mdash; most recent sale, large-building/low-$/SF bracket</td><td><a href="https://taxpwa.co.cumberland.nc.us/camapwa/BuildingDetails.aspx?PARCELPK=95939&BldgCardNum=1&SectionNum=1" target="_blank" rel="noopener">CAMA</a></td></tr>
+            <tr><td><strong>801 Person St</strong></td><td>07/19/2019</td><td>$112,000</td><td>1,500</td><td>$74.67</td><td>CC zoning, concrete/masonry drive-thru car wash, Quality C, built 1999, 36% depreciation ("Average") &mdash; same street as subject, small-building/high-$/SF bracket</td><td><a href="https://taxpwa.co.cumberland.nc.us/camapwa/BuildingDetails.aspx?PARCELPK=95701&BldgCardNum=1&SectionNum=1" target="_blank" rel="noopener">CAMA</a></td></tr>
+          </table>
+        </div>
+        <p class="note">All sales verified against Cumberland County CAMA building and sales records. Pulled 9/10/2026.</p>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <h2>Adjustment matrix</h2>
+        <p class="lede" style="margin-bottom:var(--space-6)">Each comp is adjusted to the subject's profile: a 5,984 SF, one-story, 1970-built/2011-remodeled, Quality D+ commercial building at 63% physical depreciation, in continuous owner-occupied use by an active licensed HVAC contractor. Per ownership's direction, adjustments account for the subject's building size relative to each comp, its continuously maintained and operating condition, and the demonstrated commercial viability of having an established business in place through the marketing period &mdash; net of the county assessor's own depreciation grades, which are disclosed transparently below where they run counter to that direction. This is a broker's opinion, not a certified USPAP appraisal adjustment analysis. Primary weight is placed on <strong>138 N Racepath St, 312 N Racepath St, and 408 S Racepath St</strong>, the three closest comps in size and recency.</p>
+        <div class="card table-wrap">
+          <table class="table adj-table">
+            <tr><th>Comp property</th><th>Unadj. $/SF</th><th>Net Adj. %</th><th>What was adjusted</th><th>Adj. $/SF</th></tr>
+            <tr><td><strong>138 N Racepath St</strong> <span class="pill-outline" style="font-size:9px;padding:.15rem .4rem;margin:0">Primary</span></td><td>$51.38</td><td>+5%</td><td>Size: comp's 6,520 SF is modestly larger than the subject's 5,984 SF, favoring the smaller subject with a small-unit premium (+4%). Condition/use: the county grades this comp in better physical condition (40% vs. the subject's 63% depreciation) &mdash; honestly, a &minus;9% factor on a pure assessor-grade basis &mdash; but the subject is a continuously operated, licensed HVAC facility with a 2011 remodel and no vacancy history, which Grant-Murray weighs as a +10% functional-use offset per ownership's direction.</td><td><strong>$53.95</strong></td></tr>
+            <tr><td><strong>312 N Racepath St</strong> <span class="pill-outline" style="font-size:9px;padding:.15rem .4rem;margin:0">Primary</span></td><td>$62.50</td><td>&minus;7%</td><td>Size: comp's 3,200 SF is far smaller than the subject's 5,984 SF, reversing the small-unit premium this comp's high $/SF reflects (&minus;10%). Condition/use: comp's 2023 remodel is fresh, but the subject's continuous, uninterrupted operating use through today provides a partial offset (+3%).</td><td><strong>$58.13</strong></td></tr>
+            <tr><td><strong>408 S Racepath St</strong> <span class="pill-outline" style="font-size:9px;padding:.15rem .4rem;margin:0">Primary</span></td><td>$46.88</td><td>&minus;3%</td><td>Size: comp's 4,800 SF is modestly smaller than the subject's 5,984 SF, a small reversal of its size-driven premium (&minus;4%). Condition/use: county depreciation (56%) is somewhat better than the subject's (63%) (&minus;5%), offset by the subject's demonstrated, continuously operating business per ownership's direction (+6%).</td><td><strong>$45.47</strong></td></tr>
+            <tr><td><strong>912 Grove St</strong></td><td>$19.68</td><td>+26%</td><td>Size: comp's 21,600 SF is far larger than the subject's 5,984 SF, a substantial small-unit-premium reversal favoring the subject (+18%). Condition/use: comp's 72% depreciation ("Fair") is worse than the subject's 63%, and this large warehouse carries none of the subject's continuous-operation history (+8%).</td><td><strong>$24.80</strong></td></tr>
+            <tr><td><strong>107 S Broad St</strong></td><td>$14.81</td><td>+26%</td><td>Size: comp's 16,880 SF is far larger than the subject's 5,984 SF (+16%). Condition/use: comp has no air conditioning, a functional deficiency the subject's building does not share, and lacks the subject's operating-business history (+10%).</td><td><strong>$18.66</strong></td></tr>
+            <tr><td><strong>801 Person St</strong></td><td>$74.67</td><td>&minus;28%</td><td>Size: comp's 1,500 SF is far smaller than the subject's 5,984 SF, and small units command a $/SF premium the subject's larger building cannot replicate (&minus;25%). Condition/use: county grade favors this comp (36% vs. 63% depreciation) (&minus;8%), partly offset by the subject's active-business use per ownership's direction (+5%).</td><td><strong>$53.76</strong></td></tr>
+          </table>
+        </div>
+        <p class="note">Primary comps (138 N Racepath + 312 N Racepath + 408 S Racepath) average <strong>$52.52/SF</strong> adjusted &times; 5,984 SF = <strong>$314,300</strong> primary indicated building value. The remaining three comps average $32.41/SF (wide range $18.66&ndash;$53.76/SF) and serve only as a bracketing cross-check given their much larger or much smaller scale; all six together average $42.46/SF. See value analysis below for the land add-on and the final reconciled figure.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Value analysis</h2>
+        <div class="card">
+          <p style="margin-top:0"><strong>Sales comparison approach (primary) &mdash; building.</strong> Grant-Murray gives primary weight to <strong>138 N Racepath St, 312 N Racepath St, and 408 S Racepath St</strong>, the three closed sales closest to the subject in building size (3,200&ndash;6,520 SF) and recency (2023&ndash;2024). Their adjusted $/SF averages <strong>$52.52/SF</strong>. Applied to the subject's 5,984 SF county-recorded building area, this indicates a building value of <strong>$314,300</strong>. 912 Grove St and 107 S Broad St (large buildings, low $/SF) and 801 Person St (small building, high $/SF) bracket this figure but carry less weight given their scale mismatch with the subject.</p>
+          <p><strong>Land add-on &mdash; ancillary parcels.</strong> Beyond the 0.22-acre parcel underlying the building, the subject includes <strong>0.47 acres</strong> of additional LI-zoned land (802 Person St, 0.07 ac, and the unaddressed 0.40-ac parcel), used as yard/support space for the contractor operation. Using the land-value range independently established in Grant-Murray's own 110 S Racepath St BPO for similarly modest-improvement HI/LI land in this corridor ($100,000&ndash;$250,000/acre, with the strongest single comp at $300,000/acre), and applying a conservative rate toward the lower-middle of that range to reflect the LI zoning and support-yard function of these two parcels, <strong>$130,000/acre &times; 0.47 ac = $61,100</strong> is added.</p>
+          <p><strong>Combined sales comparison indicated value: $314,300 + $61,100 = $375,400.</strong></p>
+          <p><strong>Broker overlay &mdash; size, condition, and operating-business factors.</strong> Per ownership's explicit direction, Grant-Murray applies a final professional-judgment overlay of approximately <strong>+6.5%</strong> above the raw comp-derived figure, distinct from and in addition to the comp-level adjustments above, to reflect (1) the subject's functional scale as a complete, self-contained facility for an active trade/contractor operation, (2) its continuously maintained, air-conditioned, recently remodeled condition despite the county's 63% depreciation grade, and (3) the demonstrated commercial viability of an established, licensed business having operated there continuously &mdash; a factor the county's vacant-land-oriented comps at Racepath St do not share. This overlay is disclosed explicitly as broker judgment, not as additional comp-level evidence.</p>
+          <p class="note" style="margin-top:1.5rem">Reference only: the combined 2026 assessed value is $185,537, well below this indicated range &mdash; expected, since Cumberland County assessed values are known to lag verified market transactions, and since two of the three parcels' most recent deeds were non-arm's-length internal transfers rather than market sales.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <h2>Business relocation &mdash; practical disclosure</h2>
+        <div class="card">
+          <p style="margin-top:0">Arnold Service Company (McGowan Heating &amp; Air, Inc.) is an active, ongoing HVAC contracting business operating from 820 Person St. Any sale to a third party will require the business to relocate its office, warehouse, service trucks, and inventory &mdash; a real transaction-timing consideration that a buyer will factor into negotiations (e.g., a post-closing leaseback or a delayed-possession closing date is common in owner-user sales of this type). This report values the fee-simple real estate on an <strong>as-if-delivered-vacant basis</strong>; it does not include any value attributable to the business itself (goodwill, equipment, customer list, or the HVAC license), which are personal property and intangible assets outside the scope of this real estate opinion.</p>
+          <p>Consistent with ownership's direction, the continuous operating history is treated as a positive indicator of the building's functional viability (see the Condition/use factors in the adjustment matrix above) rather than a value detractor &mdash; but the practical need to coordinate a relocation timeline should be disclosed to any prospective buyer and reflected in listing terms (e.g., marketing period, possession date, or a short-term leaseback).</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Opinion of value &amp; recommended list price</h2>
+        <div class="card">
+          <p style="margin-top:0">This opinion of sale value rests on the sales comparison approach for the improved parcel, a land value add-on for the two ancillary parcels, and a disclosed broker overlay reflecting ownership's direction on size, condition, and the ongoing business.</p>
+          <div class="stats">
+            <div class="stat"><div class="stat-label">Sales comparison indicated value</div><div class="stat-value">$375,400</div></div>
+            <div class="stat"><div class="stat-label">Broker overlay (size / condition / operating use)</div><div class="stat-value">+6.5%</div></div>
+            <div class="stat stat-alert"><div class="stat-label">Recommended list price</div><div class="stat-value">$400,000</div></div>
+            <div class="stat"><div class="stat-label">Combined 2026 assessed value (reference only)</div><div class="stat-value">$185,537</div></div>
+          </div>
+          <p class="note" style="margin-top:1.5rem">Grant-Murray Real Estate recommends an initial asking list price of <strong>$400,000</strong> ($66.85/SF on the 5,984 SF building, inclusive of the 0.69-acre combined site) for 802 &amp; 820 Person St, based on the sales comparison approach &mdash; led by the three most locationally and sizewise comparable closed sales on N/S Racepath St &mdash; a land add-on for the two ancillary parcels, and a disclosed broker overlay per ownership's direction. This is a broker's opinion for marketing purposes, not a certified USPAP appraisal.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <h2>Listing / commission terms</h2>
+        <div class="card">
+          <div class="terms-grid">
+            <div>
+              <h4>6% &mdash; co-brokered sale</h4>
+              <p>A 6% commission applies to the gross sale price when the buyer is procured through a cooperating (buyer's-side) broker, split between Grant-Murray Real Estate, LLC as listing broker and the cooperating buyer's broker per standard MLS/commercial co-brokerage practice.</p>
+            </div>
+            <div>
+              <h4>4% &mdash; in-house sale</h4>
+              <p>A 4% commission applies when Grant-Murray Real Estate, LLC procures the buyer directly, with no cooperating buyer's broker involved in the transaction.</p>
+            </div>
+          </div>
+          <p class="note">Listing team: <strong>Patrick Murray, CCIM, SIOR</strong>. Final listing agreement terms, duration, possession date, and any marketing-cost provisions are to be set out in a separate written listing agreement between Grant-Murray Real Estate, LLC and McGowan Investments, LLC.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Limitations</h2>
+        <div class="card">
+          <ol style="margin:0 0 0 1.2rem;padding:0">
+            <li style="margin-bottom:.6rem">The client's request referenced "810 Person St"; no such address exists in Cumberland County records. This report values the three McGowan Investments, LLC parcels actually on this tract &mdash; 802 Person St, 820 Person St, and one unaddressed 0.40-acre parcel &mdash; per client confirmation.</li>
+            <li style="margin-bottom:.6rem"><strong>No arm's-length sale of the assembled subject has ever occurred.</strong> The most recent deeds on all three parcels (2023 and 2024) were non-arm's-length internal transfers with $0 revenue stamps; the only money-transfer sale on record for any parcel is the 2013 $110,000 sale of 820 Person St alone, which is disclosed for history only and not relied upon as a current value indicator.</li>
+            <li style="margin-bottom:.6rem">County assessor depreciation grades for the subject (63% physical depreciation, "Fair," Quality D+) are, on a pure assessor-grade basis, comparable to or worse than several of the comps used. The upward condition/use adjustments applied above reflect Grant-Murray's professional judgment &mdash; per ownership's explicit direction &mdash; that the building's continuous, licensed, air-conditioned operating use and 2011 remodel outweigh the assessor's grade; this counter-evidence is disclosed rather than omitted.</li>
+            <li style="margin-bottom:.6rem">The 6.5% broker overlay applied in the value analysis is a disclosed judgment factor requested by ownership, not additional market evidence; it is kept separate from the comp-level adjustments so a reader can see the raw sales-comparison figure ($375,400) before and after the overlay.</li>
+            <li style="margin-bottom:.6rem">This report values the real estate on an as-if-delivered-vacant basis and excludes any value attributable to the ongoing HVAC business's goodwill, equipment, customer relationships, or contractor license, which are outside the scope of a real estate BPO.</li>
+            <li style="margin-bottom:.6rem">The $130,000/acre rate applied to the two ancillary land parcels is a broker-judgment rate within the range independently established in Grant-Murray's 110 S Racepath St BPO, not a distinct new land-sale comp; no separate unimproved-land sale specific to these two ancillary parcels was found.</li>
+            <li style="margin-bottom:.6rem">No client-supplied marketing brochure, floor plan, or photograph was available for this assignment; all property and comp data comes directly from Cumberland County GIS/CAMA records and independent business-license research.</li>
+            <li>This is a broker's opinion of value for marketing purposes, prepared by Grant-Murray Real Estate, LLC, not a certified USPAP appraisal.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container two-col">
+        <div class="card">
+          <h3>Prepared by</h3>
+          <p><strong>Patrick Murray, CCIM, SIOR</strong><br/>Principal / Broker in Charge<br/>Grant-Murray Real Estate, LLC</p>
+          <p style="margin-top:.75rem">150 N. McPherson Church Rd<br/>Fayetteville, NC 28303</p>
+          <p style="margin-top:.75rem">O: 910.829.1617 &middot; C: 910.861.0449<br/>patrick@grantmurrayre.com<br/><a href="https://www.grantmurrayre.com" target="_blank" rel="noopener">grantmurrayre.com</a></p>
+        </div>
+        <div class="card">
+          <h3>Prepared for</h3>
+          <p><strong>Scott McGowan</strong><br/>McGowan Investments, LLC (owner of record)<br/>317 Stacy Weaver Dr, Fayetteville, NC 28311</p>
+          <p class="disclaimer">This Broker Price Opinion (BPO) is prepared by Patrick Murray, CCIM, SIOR, of Grant-Murray Real Estate, LLC. It is not an appraisal and does not constitute a certified valuation under USPAP. The value conclusion herein is based on the sales comparison approach, built on comparable sales independently researched by Grant-Murray Real Estate directly from county records, with a disclosed land add-on and broker-judgment overlay reflecting ownership's direction. It is subject to further verification, changing market conditions, coordination of the ongoing business's relocation, and additional due diligence.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <img class="footer-logo" src="assets/gm-logo.svg" alt="Grant-Murray Real Estate" />
+      <div>
+        Broker Price Opinion — prepared 9/10/2026.<br/>
+        Prepared by Grant-Murray Real Estate | CCIM | SIOR
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
